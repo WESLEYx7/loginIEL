@@ -3,8 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Login</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Montserrat:wght@100&family=Poppins:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+body .principal {
+    width: 100%;
+    height: 170pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .principal img{
+    width: 130pt;
+    height: 90pt;
+    
+}
+
+body h1 {
+    color: #0055DB;
+}
+
+body form h3 {
+    color: #0055DB;
+    margin-bottom: 40pt;
+}
+
+body form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+body form input {
+    width: 30%;
+    height: 50pt;
+    border-radius: 30pt;
+    border: 2px solid #003D9D;
+    margin-bottom: 20pt;
+    font-size: 18pt;
+    text-indent: 20px;
+    font-weight: 600;
+}
+
+body form input:focus {
+       height: 53pt;
+       width: 31%;
+}
+
+body form input::placeholder {
+    color: #03317b;
+}
+
+body .divForm {
+    margin-top: 15pt;
+    height: 400pt;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+body .divForm form #entrar {
+    width: 20%;
+    margin-top: 40pt;
+    color: white;
+    background-color: #003D9D;
+    font-size: 32pt;
+    cursor: pointer;
+}
+
+body .divForm form #entrar:hover {
+    background-color: #012a6e;
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    body .principal {
+        width: 100%;
+        height: 170pt;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body .principal img{
+        width: 130pt;
+        height: 90pt;
+        
+    }
+
+    body h1 {
+        color: #0055DB;
+    }
+
+    body form h3 {
+        color: #0055DB;
+        margin-bottom: 40pt;
+    }
+
+    body form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    body form input {
+        width: 80%;
+        height: 50pt;
+        border-radius: 30pt;
+        border: 2px solid #003D9D;
+        margin-bottom: 20pt;
+        font-size: 18pt;
+        text-indent: 20px;
+        font-weight: 600;
+    }
+
+    body form input:focus {
+       height: 55pt;
+       width: 82%;
+    }
+
+    body form input::placeholder {
+    color: #03317b;
+    }
+
+    body .divForm {
+        margin-top: 30pt;
+        height: 400pt;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    body .divForm form #entrar {
+        width: 70%;
+        margin-top: 80pt;
+        color: white;
+        background-color: #003D9D;
+        font-size: 32pt;
+        cursor: pointer;
+    }
+  }
+    </style>
 </head>
 <body>
     <div class="principal">
@@ -14,10 +181,12 @@
     <h1>Seja Bem Vindo!</h1>
 
     <div class="divForm">
-        <form>
+        <form method="post" action="$PORTAL_ACTION$">
             <h3>Faça seu login</h3>
-            <input placeholder="Usuário" type="text" name="" id="">
-            <input placeholder="Senha" type="password">
+            <input placeholder="Usuário" type="text" name="auth_user" id="">
+            <input placeholder="Senha" name="auth_pass" type="password">
+            <input name="redirurl" type="hidden" value="$PORTAL_REDIRURL$">
+            <input name="zone" type="hidden" value="$PORTAL_ZONE$">
             <input id="entrar" type="submit" value="Entrar">
         </form>
     </div>
