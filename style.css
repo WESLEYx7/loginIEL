@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Montserrat:wght@100&family=Poppins:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+body .principal {
+    width: 100%;
+    height: 170pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .principal img{
+    width: 130pt;
+    height: 90pt;
+    
+}
+
+body h1 {
+    color: #0055DB;
+}
+
+body form h3 {
+    color: #0055DB;
+    margin-bottom: 40pt;
+}
+
+body form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+body form input {
+    width: 30%;
+    height: 50pt;
+    border-radius: 30pt;
+    border: 2px solid #003D9D;
+    margin-bottom: 20pt;
+    font-size: 18pt;
+    text-indent: 20px;
+    font-weight: 600;
+}
+
+body form input::placeholder {
+    color: #0055DB;
+}
+
+body .divForm {
+    margin-top: 15pt;
+    height: 400pt;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+body .divForm form #entrar {
+    width: 20%;
+    margin-top: 40pt;
+    color: white;
+    background-color: #003D9D;
+    font-size: 32pt;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    body .principal {
+        width: 100%;
+        height: 170pt;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body .principal img{
+        width: 130pt;
+        height: 90pt;
+        
+    }
+
+    body h1 {
+        color: #0055DB;
+    }
+
+    body form h3 {
+        color: #0055DB;
+        margin-bottom: 40pt;
+    }
+
+    body form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    body form input {
+        width: 80%;
+        height: 50pt;
+        border-radius: 30pt;
+        border: 2px solid #003D9D;
+        margin-bottom: 20pt;
+        font-size: 18pt;
+        text-indent: 20px;
+        font-weight: 600;
+    }
+
+    body form input::placeholder {
+        color: #0055DB;
+    }
+
+    body .divForm {
+        margin-top: 30pt;
+        height: 400pt;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    body .divForm form #entrar {
+        width: 70%;
+        margin-top: 80pt;
+        color: white;
+        background-color: #003D9D;
+        font-size: 32pt;
+        cursor: pointer;
+    }
+  }
